@@ -84,7 +84,28 @@ FVector ResultVector = MyVector * SomeFloat;
 //// Functions //// 
 void MyTestFunction()
 {
-	int MyInt = 10;
+	UE_LOG(LogTemp, Display, TEXT("This is a test function."));
 }
 
 MyTestFunction();
+
+//// Function Parameters ////
+void MyTestFunction(float Parameter1, int Parameter2)
+{
+	int MyInt = Parameter2 * 2;
+	float Calculation = Parameter1 / 3.5f;
+}
+MyTestFunction(11.2f, 20);
+
+//// Member Functions (In header file)////
+
+class AMovingPlatform
+{
+	void MemberFunction(float MyParam);
+}
+//// Member Functions (In CPP file) ////
+void AMovingPlatform::MemberFunction(float MyParam)
+{
+	FVector MyLocation = GetActorLocation();
+	SetActorLocation(MyLocation * 2.0f);
+}
