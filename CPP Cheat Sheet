@@ -1,0 +1,18 @@
+# Print in Output Log
+UE_LOG(LogTemp, Display, TEXT("This Message will be in your Output Log"));
+
+# Define variable and print it in Log
+int NumberOfApples = 10;
+int NumberOfOranges = 5;
+float PriceOfApple = 0.99f;
+float PriceOfOrange = 1.25f;
+FString FruitName = TEXT("Apple");
+
+// Print a int to the output log
+UE_LOG(LogTemp, Display, TEXT("Number of apples: %d %d"), NumberOfApples, NumberOfOranges);
+
+// Print a float to the output log
+UE_LOG(LogTemp, Display, TEXT("\n Price per apple: $%f \nPrice per orange: $%f"), PriceOfApple, PriceOfOrange);
+
+// Print a string to the output log
+UE_LOG(LogTemp, Display, TEXT("\n Fruit Type: %s"), *FruitName);
