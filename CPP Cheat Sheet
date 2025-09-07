@@ -16,3 +16,14 @@ UE_LOG(LogTemp, Display, TEXT("\n Price per apple: $%f \nPrice per orange: $%f")
 
 // Print a string to the output log
 UE_LOG(LogTemp, Display, TEXT("\n Fruit Type: %s"), *FruitName);
+
+# Mathematics
+int a = -10;
+int b = -5;
+int c = a * b;
+
+UE_LOG(LogTemp, Display, TEXT("%d multiplied by %d is %d"), a, b, c)
+
+float MyCalculation = 12.0f / 5.0f * 10.0f - 3.5f;
+
+UE_LOG(LogTemp, Display, TEXT("MyCalculation is %f"), MyCalculation)
