@@ -1,7 +1,7 @@
-# Print in Output Log
+//// Print in Output Log ////
 UE_LOG(LogTemp, Display, TEXT("This Message will be in your Output Log"));
 
-# Define variable and print it in Log
+//// Define variable and print it in Log ////
 int NumberOfApples = 10;
 int NumberOfOranges = 5;
 float PriceOfApple = 0.99f;
@@ -17,7 +17,7 @@ UE_LOG(LogTemp, Display, TEXT("\n Price per apple: $%f \nPrice per orange: $%f")
 // Print a string to the output log
 UE_LOG(LogTemp, Display, TEXT("\n Fruit Type: %s"), *FruitName);
 
-# Mathematics
+//// Mathematics
 int a = -10;
 int b = -5;
 int c = a * b;
@@ -27,3 +27,12 @@ UE_LOG(LogTemp, Display, TEXT("%d multiplied by %d is %d"), a, b, c)
 float MyCalculation = 12.0f / 5.0f * 10.0f - 3.5f;
 
 UE_LOG(LogTemp, Display, TEXT("MyCalculation is %f"), MyCalculation)
+
+//// Variables in the header (Shows in the window)
+// Editable in the window
+	UPROPERTY(EditAnywhere)
+	float PlatformSpeed = 20.0f;
+
+// Showable in the window
+	UPROPERTY(VisibleAnywhere)
+	int PlatformHeight = 100;
