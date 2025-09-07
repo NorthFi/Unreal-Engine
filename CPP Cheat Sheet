@@ -53,3 +53,38 @@ struct FVector
 
 // In CPP
 SetActorLocation(MyVector);
+
+//// Game Loops ////
+//All games use a game loop
+//This is a loop that runs continuously and updates the game.
+// 1. Get input
+// 2. Update game state
+// 3. Render graphics to the screen
+MyVector.X = MyVector.X + PlatformSpeed;
+SetActorLocation(MyVector);
+
+	CurrentLocation.X = CurrentLocation.X + PlatformSpeed;
+	SetActorLocation(CurrentLocation);
+
+//// Struct Operations ////
+FVector MyVector1 = FVector(1.0f, 2.0f, 3.0f);
+FVector MyVector1 = FVector(4.0f, 5.0f, 6.0f);
+
+FVector ResultVector = MyVector1 + MyVector2;
+// ResultVector (5.0f, 7.0f, 9.0f)
+
+//// Vector * Float ////
+FVector MyVector = FVector(1.0f, 2.0f, 3.0f);
+float SomeFloat = 10.0f;
+
+FVector ResultVector = MyVector * SomeFloat;
+// ResultVector (10.0f, 20.0f, 30.0f)
+
+
+//// Functions //// 
+void MyTestFunction()
+{
+	int MyInt = 10;
+}
+
+MyTestFunction();
