@@ -36,3 +36,20 @@ UE_LOG(LogTemp, Display, TEXT("MyCalculation is %f"), MyCalculation)
 // Showable in the window
 	UPROPERTY(VisibleAnywhere)
 	int PlatformHeight = 100;
+
+//// Structs ////
+
+// A struct is a group of varoables 
+struct FVector
+{
+	float X;
+	float Y;
+	float Z;
+};
+
+// In header
+	UPROPERTY(EditAnywhere)
+	FVector MyVector = FVector(1102.0f, -1050.0f, 297.0f);
+
+// In CPP
+SetActorLocation(MyVector);
