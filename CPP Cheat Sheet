@@ -103,6 +103,7 @@ class AMovingPlatform
 {
 	void MemberFunction(float MyParam);
 }
+
 //// Member Functions (In CPP file) ////
 void AMovingPlatform::MemberFunction(float MyParam)
 {
